@@ -5,7 +5,7 @@ const searchBtn = document.getElementById('search-btn');
 const wordInput = document.getElementById('word-input');
 const resultDisplay = document.getElementById('result-display');
 
-// 2. EVENT LISTENER: Triggered when user clicks search
+// 2. EVENT LISTENER
 searchBtn.addEventListener('click', () => {
     const word = wordInput.value.trim();
     if (word) {
@@ -23,7 +23,7 @@ async function fetchDictionaryData(word) {
     try {
         const response = await fetch(apiURL);
         
-        // ERROR HANDLING: Requirement "Display message if word is not found"
+        // ERROR HANDLING: 
         if (!response.ok) {
             throw new Error("We couldn't find that word. Check your spelling!");
         }
